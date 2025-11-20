@@ -1,8 +1,5 @@
 package com.aigreentick.services.notification.report.dto;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,8 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ChannelSummary {
-    private long total = 0L;
-    private Map<String, Long> statusCounts = new HashMap<>();
-    private double successRate; // percentage 0-100
+public class ProviderStats {
+    private long sent;   // number of attempts (or accepted)
+    private long failed; // number of failures
 }
